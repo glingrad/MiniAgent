@@ -1,0 +1,23 @@
+{
+  "mcpServers": {
+    "local-tools": {
+      "command": "python",
+      "args": ["src/server.py"], 
+      "env": {
+        "PYTHONPATH": "."
+      }
+    },
+    "sqlite-db": {
+      "command": "uvx",
+      "args": ["mcp-server-sqlite", "--db-path", "./playground/my_db.db"]
+    },
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp@latest"]
+    },
+    "memory": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-memory"]
+    }
+  }
+}
